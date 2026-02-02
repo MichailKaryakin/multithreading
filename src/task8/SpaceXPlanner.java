@@ -14,7 +14,7 @@ public class SpaceXPlanner {
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
         for (RocketLaunch rocket : launches) {
-            executor.submit(() -> {
+            executor.execute(() -> {
                 long currentTime = System.currentTimeMillis();
                 long waitTime = rocket.getLaunchTime() - (currentTime - startTime);
 

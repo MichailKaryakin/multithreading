@@ -23,6 +23,8 @@ public class Main {
                 .thenAccept(System.out::println);
 
         CompletableFuture.allOf(raven1, raven2).join();
+
+        System.out.println("Конец");
     }
 
     private String sendRaven(Kingdom origin, Kingdom destination) {
